@@ -1,5 +1,5 @@
 
-/*var fs = require('fs');
+var fs = require('fs');
 
 var count = 0;
 
@@ -25,7 +25,8 @@ var myServer = http.createServer(function(request, response){
 
 //Asking server to listen on a specific port
 myServer.listen(4000);
-/*var fs = require('fs');
+
+
 
 
 //Reading a File
@@ -153,13 +154,13 @@ app.get('/', function(req, res){
 
 
 }) //end of app.get
-*/
+
 
 // Retrieve Only one Speaker
 
 var express = require('express');
 
-var dataFile = require('./data/data.json');
+var dataFile = require('./app/data/data.json');
 
 var app= express();
 
