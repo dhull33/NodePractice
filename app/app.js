@@ -2,6 +2,8 @@
 var express = require('express');
 var app = express();
 
+var dataFile = require("./data/animals.json");
+
 //Set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -10,8 +12,16 @@ app.set('view engine', 'ejs');
 
 
 // index page
-app.get('/', function(req, res){
-    res.render('view')
+app.get('/', (req, res) => {
+
+    ////////THIS IS WHERE I LEFT OFF //////////////
+    if (dataFile.cats) {
+        <% document.getElementById('pic').src='dataFile.cats[0].imgURL'
+    <% } else { %>
+        <img src=<%= dataFile.dogs[0].imgURL %> >
+    <% } %>
+
+    res.render('view.ejs')
 });
 
 
