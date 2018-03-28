@@ -5,6 +5,7 @@ var http = require('http');
 var url = require('url');
 
 
+
 /* onRequest function
 
 createServer is function within the 'http' module ==> creates an object ==>
@@ -16,15 +17,24 @@ writeHead' sends an HTTP status code '200' and the content-type back to the brow
 
  */
 function start(route, handle) {
-
+    debugger;
     function onRequest(request, response) {
-        //Get the path name
+        var postData = "";
         var pathname = url.parse(request.url).pathname;
         console.log("Request for " + pathname + " received.");
 
-        route(handle, pathname, response);
+        request.setEncoding('utf8');
 
-    };
+        request.addListener('data', function(postDataChunk){
+            postData += postDataChunk;
+            console.log("Received POST data chunk " + postDataChunk + ".");
+        });
+
+        request.addListener('end', function() {
+            route(handle, pathname, response, postData);
+        });
+
+    }
 
     http.createServer(onRequest).listen(9000, function () {
         console.log("Listening on port 9000!")
