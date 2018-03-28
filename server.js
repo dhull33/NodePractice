@@ -15,18 +15,15 @@ writeHead' sends an HTTP status code '200' and the content-type back to the brow
 //sends "hello world" to be written on the browser
 
  */
-function start(route) {
+function start(route, handle) {
 
     function onRequest(request, response) {
         //Get the path name
         var pathname = url.parse(request.url).pathname;
         console.log("Request for " + pathname + " received.");
 
-        route(pathname);
+        route(handle, pathname, response);
 
-        response.writeHead(200, {"Content-Type": "text/plain"});
-        response.write("Hello World");
-        response.end();
     };
 
     http.createServer(onRequest).listen(9000, function () {
