@@ -2,20 +2,30 @@
 /* Creating an HTTP Server */
 //creates an object 'http' that contains the methods for http
 var http = require('http');
+var url = require('url');
 
 
-/*createServer is function within the 'http' module ==> creates an object ==>
+/* onRequest function
+
+createServer is function within the 'http' module ==> creates an object ==>
 'listen' takes a numeric value which indicates the port number our HTTP server is going to listen on
 
+writeHead' sends an HTTP status code '200' and the content-type back to the browser
+
+//sends "hello world" to be written on the browser
+
  */
-function start() {
+function start(route) {
 
     function onRequest(request, response) {
-        // 'writeHead' sends an HTTP status code '200' and the content-type back to the browser
+        //Get the path name
+        var pathname = url.parse(request.url).pathname;
+        console.log("Request for " + pathname + " received.");
+
+        route(pathname);
+
         response.writeHead(200, {"Content-Type": "text/plain"});
-        //sends "hello world" to be written on the browser
         response.write("Hello World");
-        //ends the response
         response.end();
     };
 
@@ -25,4 +35,5 @@ function start() {
     });
 }
 
+/* 'exports' allows us to use our file as a 'module' */
 exports.start = start;
