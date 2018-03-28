@@ -1,4 +1,4 @@
-
+/*
 var fs = require('fs');
 
 var count = 0;
@@ -12,7 +12,7 @@ console.log(newLine.length-1);
 
 
 
-//Example Function
+//CREATING A SERVER
 var http = require('http');
 
 var myServer = http.createServer(function(request, response){
@@ -26,9 +26,20 @@ var myServer = http.createServer(function(request, response){
 //Asking server to listen on a specific port
 myServer.listen(4000);
 
+*/
+var fs = require('fs');
+
+//Writing a File
+fs.writeFile(test.txt, 'I love Node', function(error){
+    if (error){
+        console.error(error.message);
+        return;
+    }
+    console.log('File Save: ', test.txt);
+});
 
 
-
+/*
 //Reading a File
 var fileName = "test.txt";
 
@@ -38,16 +49,6 @@ fs.readFile(fileName, function(error, buffer){
         return;
     }
     console.log('File Data: ', buffer.toString());  // 'buffer' is a binary buffer object => what is that?
-});
-
-
-//Writing a File
-fs.writeFile(fileName, 'I love Node', function(error){
-    if (error){
-        console.error(error.message);
-        return;
-    }
-    console.log('File Save: ', fileName);
 });
 
 
@@ -183,3 +184,5 @@ app.get('/speaker/:speakerid', function(req, res){
 app.listen(9000, function(){
     console.log('Example app listening on port 9000!');
 });
+
+*/
