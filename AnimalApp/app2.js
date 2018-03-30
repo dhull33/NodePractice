@@ -5,6 +5,10 @@ let express = require('express');
 // Create an instance of express
 let app = express();
 
+//Set view engine: ejs
+app.set('view engine', 'ejs');
+
+app.set('views', 'AnimalApp/views');
 //Create server
 http.createServer(app).listen(9000, function(){
     console.log("Listening on port 9000!");
