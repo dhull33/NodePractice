@@ -8,13 +8,12 @@ let app = express();
 //Set view engine: ejs
 app.set('view engine', 'ejs');
 
-app.set('views', 'AnimalApp/views');
+app.set('views', 'views');
+
+app.use(require('./routes/index'));
+
 //Create server
 http.createServer(app).listen(9000, function(){
     console.log("Listening on port 9000!");
 });
 
-//Route for the home page
-app.get('/', function(request,response){
-    response.send("<h1>HEY YO BITCH! WHATCHA DOING?</h1>");
-});

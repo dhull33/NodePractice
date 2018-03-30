@@ -1,0 +1,58 @@
+
+{
+  "dogs": [
+    {
+      "name": "Zeus",
+      "description": "He's a Good Boy",
+      "imgURL": "images/zeus.jpg"
+    },
+    {
+      "name": "Zeus Power",
+      "description": "Zeus and Austin",
+      "imgURL": "images/king.jpg"
+    },
+    {
+      "name": "Zeus Sleeping",
+      "description": "Sleeping like a dog",
+      "imgURL": "images/sleeping.jpg"
+    },
+    {
+      "name": "Power Posing",
+      "description": "Zeus Power Posing",
+      "imgURL": "images/powerPose.jpg"
+    },
+    {
+      "name": "Sick",
+      "description": "I fought a giant river rat",
+      "imgURL": "images/sick.jpg"
+    }
+  ],
+
+  "cats": [
+    {
+      "name": "Biscuit",
+      "description": "HEY! Look at my balls.",
+      "imgURL": "images/balls.jpg"
+    },
+    {
+      "name": "Selfie",
+      "description": "Biscuit taking a selfie",
+      "imgURL": "images/ahhhh.jpg"
+    },
+    {
+      "name": "Scared",
+      "description": "Biscuit being a wus.",
+      "imgURL": "images/scared.jpg"
+    },
+    {
+      "name": "Sleepy",
+      "description": "Too tired to fuck with you.",
+      "imgURL": "images/sleepy.jpg"
+    },
+    {
+      "name": "Peacocking",
+      "description": "Look at my furry chest",
+      "imgURL": "images/push.jpg"
+    }
+  ]
+}
