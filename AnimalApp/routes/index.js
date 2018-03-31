@@ -5,22 +5,9 @@ const fs = require("fs");
 
 router.get('/', function(request, response){
 
-    const pagePhotos = [];
+    const pagePhotos = fs.readdirSync("public/images");
 
-    fs.readdir("public/images", function(err, files){
-        if (err) {
-            console.log('Ah Shit it messed up!');
-        }else{
-            setTimeout(function(){
-                for(let j=0; j < files.length; j++){
-                    pagePhotos.push(files[j]);
-                }
-
-            });
-        }
-        //console.log(pagePhotos);
-
-    });
+    console.log(pagePhotos[1]);
 
 
     response.render('index', {
