@@ -5,22 +5,29 @@ const fs = require("fs");
 
 router.get('/', function(request, response){
 
+    const pagePhotos = [];
 
-
-    const pics = fs.readdir("public/images", function(err, files){
-
+    fs.readdir("public/images", function(err, files){
         if (err) {
             console.log('Ah Shit it messed up!');
         }else{
-            this.pagePhotos = [];
-            this.pagePhotos.push(files);
-            console.log(this.pagePhotos);
+            setTimeout(function(){
+                for(let j=0; j < files.length; j++){
+                    pagePhotos.push(files[j]);
+                }
+
+            });
         }
+        //console.log(pagePhotos);
+
     });
 
-    console.log(pics);
 
-    response.render('index');
+    response.render('index', {
+        pageTitle: 'Zeus and Biscuit',
+        pageID: 'main',
+        pictures: pagePhotos
+    });
 });
 
 module.exports = router;
