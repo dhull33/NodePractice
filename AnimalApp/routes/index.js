@@ -1,14 +1,24 @@
 
 const express = require('express');
 const router = express.Router();
+const fs = require("fs");
 
 router.get('/', function(request, response){
-    /*
-    let pagePhotos = [];
 
-    public.images.forEach(function(item){
-        pagePhotos = pagePhotos.concat(item);
-    }); */
+
+
+    const pics = fs.readdir("public/images", function(err, files){
+
+        if (err) {
+            console.log('Ah Shit it messed up!');
+        }else{
+            this.pagePhotos = [];
+            this.pagePhotos.push(files);
+            console.log(this.pagePhotos);
+        }
+    });
+
+    console.log(pics);
 
     response.render('index');
 });
