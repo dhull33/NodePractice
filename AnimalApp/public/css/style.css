@@ -1,6 +1,6 @@
 
 body {
-    margin: 0;
+    margin: -1rem;
     padding: 0;
 }
 
@@ -9,7 +9,19 @@ body {
     max-width: 400px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     font-family: 'Roboto', sans-serif;
+}
+
+#welcome {
+    font-size: 90px;
+    font-weight: 400;
+    color: white;
+}
+
+.intro {
+    font-size: 30px;
     font-weight: 300;
+    color: white;
+    margin-bottom: 0px;
 }
