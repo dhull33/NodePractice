@@ -1,4 +1,5 @@
 
+<!--
 <div class="container">
 
    <% for(let i = 1; i < pictures.length; i++){  %>
@@ -7,4 +8,21 @@
 
     <% } %>
 
+</div>
+
+-->
+
+<div class="card bg-dark text-white">
+
+    <% for(let i = 1; i < pictures.length; i++){  %>
+
+    <img class='card-img' src="images/beach/<%= pictures[i] %>"  alt = 'Image <%= i %>' />
+
+    <% } %>
+
+    <div class="card-img-overlay">
+        <h5 id='welcome' class="card-title"></h5>
+        <p class="card-text intro"></p>
+        <p class="card-text intro1"></p>
+    </div>
 </div>
