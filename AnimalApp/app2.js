@@ -1,14 +1,17 @@
 
 // Includes HTTP & Express libraries
-let http = require('http');
-let express = require('express');
+const http = require('http');
+const express = require('express');
 // Create an instance of express
-let app = express();
+const app = express();
+// Get data
+const dataFile = require('./data/animals.json');
 
 //Set view engine: ejs
 app.set('view engine', 'ejs');
-
 app.set('views', 'views');
+//Set data
+app.set('appData', dataFile);
 
 app.use(require('./routes/index'));
 
