@@ -5,7 +5,7 @@ const fs = require("fs");
 
 router.get('/', function(request, response){
 
-    const pagePhotos = fs.readdirSync("public/images");
+    const pagePhotos = fs.readdirSync("public/images/beach");
 
 
     response.render('index', {
