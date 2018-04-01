@@ -13,12 +13,17 @@
 
     <body>
 
-        <div class="container-fluid">
+        <div id="navbar" class="">
+            <!-- Navbar goes here -->
+            <% include partials/templates/navbar.ejs %>
+        </div>
+
+        <div id='head' class="container-fluid">
            <!--  include header.ejs  -->
             <% include partials/templates/header.ejs %>
         </div>
 
-        <main class="container-fluid">
+        <main id='main' class="container-fluid">
 
             <% include partials/content/pictures.ejs %>
 
