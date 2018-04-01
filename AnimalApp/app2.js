@@ -14,6 +14,7 @@ app.set('views', 'views');
 app.set('appData', dataFile);
 
 app.use(require('./routes/index'));
+app.use(require('./routes/astonished'));
 
 
 //Set public folder as static

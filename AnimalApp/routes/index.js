@@ -8,7 +8,7 @@ router.get('/', function(request, response){
     const pagePhotos = fs.readdirSync('public/images/beach');
 
     response.render('index', {
-        pageTitle: 'Zeus and Biscuit',
+        pageTitle: 'Primates in Paradise',
         pageID: 'main',
         pictures: pagePhotos
     });
