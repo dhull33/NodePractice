@@ -6,7 +6,7 @@ router.get('/sneaky', function(request, response){
 
     const pagePhotos = fs.readdirSync('public/images/creepin');
 
-    response.render('index', {
+    response.render('sneakyIndex', {
         pageTitle: 'Ninja Monkeys',
         pageID: 'sneaky',
         pictures: pagePhotos
