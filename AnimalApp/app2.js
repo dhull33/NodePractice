@@ -15,7 +15,8 @@ app.set('appData', dataFile);
 
 app.use(require('./routes/index'));
 app.use(require('./routes/astonished'));
-
+app.use(require('./routes/sneaky'));
+app.use(require('./routes/think'));
 
 //Set public folder as static
 app.use(express.static('./public'));

@@ -6,7 +6,7 @@ router.get('/thinking', function(request, response){
 
     const pagePhotos = fs.readdirSync('public/images/deepThink');
 
-    response.render('index', {
+    response.render('thinkIndex', {
         pageTitle: 'Thinking Monkeys',
         pageID: 'think',
         pictures: pagePhotos
