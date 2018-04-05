@@ -7,7 +7,7 @@ router.get('/astonished', function(request, response){
     const pagePhotos = fs.readdirSync('public/images/astonished');
 
     response.render('index', {
-        pageTitle: 'Shocked Monkeys',
+        pageTitle: 'Shocked Primates',
         pageID: 'shocked',
         pictures: pagePhotos
     });
