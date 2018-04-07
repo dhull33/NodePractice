@@ -3,7 +3,7 @@ body {
     margin: 0rem;
     padding: 0;
     width: 100%;
-    background: #333030 ;
+    background: #3C3B3B ;
 }
 
 .resize {
@@ -31,4 +31,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .navAnchor {
     font-size: 3vw;
+}
+
+.borider{
+    border-radius: 0.2rem;
 }
