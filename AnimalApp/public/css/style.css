@@ -30,9 +30,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 .navAnchor {
-    font-size: 3vw;
+    font-size: 2.9vw;
 }
 
 .borider{
     border-radius: 0.2rem;
+}
+
+img.icon{
+    max-width: 20%;
+    max-height: 20%;
 }
