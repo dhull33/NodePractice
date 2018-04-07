@@ -59,6 +59,7 @@ typings/
 
 v8.log
 .idea/
+-node_modules
 *.DS_Store
 examples/*/log/*
 site/log/*
